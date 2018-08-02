@@ -4,8 +4,8 @@
 
 import argparse
 import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
+#import matplotlib
+#import matplotlib.pyplot as plt
 import gzip
 
 def get_arguments():
@@ -16,7 +16,7 @@ def get_arguments():
 args = get_arguments()
 file = args.file
 
-files = {'/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz':'index', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz':'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz':'index', 'index_test.fq': 'index', 'read_test.fq': 'read'}
+files = {'/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz':'index', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz':'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz':'index', 'index_test.fq.gz': 'index', 'read_test.fq.gz': 'read'}
 
 
 def convert_phred(letter):
@@ -59,17 +59,26 @@ mean_scores = scores_sum/NQ
 y = mean_scores.tolist()
 x = range(len(mean_scores))
 
-plt.figure(figsize=(16, 10), dpi= 80, facecolor='w', edgecolor='k')
+#plt.figure(figsize=(16, 10), dpi= 80, facecolor='w', edgecolor='k')
 
-plt.plot(x, y, marker='o')
-plt.xlabel('Base Position')
-plt.ylabel('Mean Quality Score')
-plt.title('Mean Quality Scores from Illumina Sequencing')
+#plt.plot(x, y, marker='o')
+#plt.xlabel('Base Position')
+#plt.ylabel('Mean Quality Score')
+#plt.title('Mean Quality Scores from Illumina Sequencing')
 
 #plt.show()
 
-image_name = 'mean_{}.png'
-plt.savefig(image_name.format(file))
+name = 'mean_{}.tsv'
+filename = file.strip().split('/')[-1]
+out = name.format(filename)
+
+with open(out, 'w') as of:
+	# Column 1 is x, column 2 is y
+	for item in range(len(y)):
+		line = str(item) + '\t' + str(y[item][0])+ '\n'
+		of.write(line)
+		
+#plt.savefig(image_name.format(file))
 
 
 
