@@ -22,7 +22,7 @@ file = args.file
 
 #this dictionary is used to specify size of numpy array, it only works with these particular files. I should edit this
 #if I need an universal script at any point 
-files = {'/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz':'index', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz':'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz':'index', 'index_test.fq.gz': 'index', 'read_test.fq.gz': 'read'}
+files = {'/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/demultiplexed/23_4A_control_S17_L008_R2_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/demultiplexed/19_3F_fox_S14_L008_R1_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/demultiplexed/19_3F_fox_S14_L008_R2_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/demultiplexed/23_4A_control_S17_L008_R1_001.fastq.gz': 'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz':'index', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz':'read', '/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz':'index', 'index_test.fq.gz': 'index', 'read_test.fq.gz': 'read'}
 
 
 def convert_phred(letter):
