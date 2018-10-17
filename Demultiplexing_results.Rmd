@@ -7,7 +7,7 @@ output:
   pdf_document: default
   #html_document: default
 ---
-Note: I had to re-run my script on talapas after learning more about the index quality filtering today in class, so my output is from my last run (my script takes ~15 hours, so it's not quite done yet). I will update this once I get my final results.
+Note: I had to re-run my script on talapas after learning more about the index quality filtering today in class, so my output is from my last run.
 
 output:
 
