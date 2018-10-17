@@ -7,7 +7,47 @@ output:
   pdf_document: default
   #html_document: default
 ---
+Note: I had to re-run my script on talapas after learning more about the index quality filtering today in class, so my output is from my last run (my script takes ~15 hours, so it's not quite done yet). I will update this once I get my final results.
+
+output:
+
+```{bash, eval=FALSE}
+Percentage of index swapping: 0.12%
+Total Undetermined Reads: 4205183
+Total Low-quality Reads: 5021
+Total Reads: 363246735
+
+Percentage of reads per index
+Index	Percent of Total Sequencing Run
+
+CGGTAATC	1.394343159065146
+GCTACTCT	2.041740856941219
+TATGGCAC	3.0789826644966265
+CTCTGGAT	9.628823504772864
+TACCGGAT	21.022585929093072
+GATCAAGG	1.81339551475941
+ACGATCAG	2.186627499900309
+ATCGTGGT	1.8961194516999582
+ATCATGCG	2.7770388631297678
+AACAGCGA	2.4424263579409735
+GATCTTGC	1.0023688168869571
+CTAGCTCA	4.771422377684964
+TAGCCATG	2.926284526686799
+GTCCTAAG	2.430930590470414
+GTAGCGTA	2.235186780137198
+TCGACAAG	1.060807883104579
+TCGAGAGT	3.2323888609762728
+CGATCGAT	1.5430189620286607
+TCTTCGAC	11.58829741442824
+TCGGATTC	1.269481472421218
+CACTTCAC	1.1538680450906187
+AGAGTCCA	3.1154526413017862
+TGTTCCGT	4.331217732762278
+AGGATAGC	2.387682851437054
+```
+
 I ran my python script on the test file using the following command:
+
 ```{bash, eval = FALSE}
 
 cd /projects/bgmp/hklein3/BI624/Demultiplexing
@@ -22,9 +62,7 @@ python3 demultiplexing.py -R1 /projects/bgmp/shared/2017_sequencing/1294_S1_L008
 
 ```
 
-My file took ____ hours to run
-
-Examples of the beginning of fastq outputs from the R1 and R2 files with index "AACAGCGA" and the undetermined files.
+Examples of fastq outputs from the R1 and R2 files with index "AACAGCGA" and the undetermined files.
 
 ```{bash, eval=FALSE}
 # R1 File
@@ -87,17 +125,3 @@ NAAATGCCATCTAGTGATGATGAGGCTACTGCTGACTCTCAACATTCTACTCCTCCAAAAAAGAAGAGAAAGATTCCAAC
 #AAFFJJJJJJJJJJJJJJJJJJJJJJJJFJJJJJJJJFJJJJJJJJJJJFJJFJJJFJFJAJAF<7AJF<J--7AA7<FJ----7A-F-77-77------
 ```
 
-Examples of the tail of the files:
-
-```{bash, eval=FALSE}
-
-```
-
-Number of reads in each resulting file:
-
-```{bash, eval=FALSE}
-
-```
-
-
-**count the number of sequences in each resulting fastq file**
