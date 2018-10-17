@@ -7,43 +7,44 @@ output:
   pdf_document: default
   #html_document: default
 ---
-Note: I had to re-run my script on talapas after learning more about the index quality filtering today in class, so my output is from my last run.
+Note: I had to re-run my script on talapas after learning more about the index quality filtering today in class, so my updated output was submitted after the deadline.
 
 output:
 
 ```{bash, eval=FALSE}
-Percentage of index swapping: 0.12%
+Percentage of index swapping: 7.48%
 Total Undetermined Reads: 4205183
-Total Low-quality Reads: 5021
+Total Low-quality Reads: 215058
+Total Matched Reads: 331862562
+Total Swapped Reads: 27178990
 Total Reads: 363246735
 
 Percentage of reads per index
 Index	Percent of Total Sequencing Run
-
-CGGTAATC	1.394343159065146
-GCTACTCT	2.041740856941219
-TATGGCAC	3.0789826644966265
-CTCTGGAT	9.628823504772864
-TACCGGAT	21.022585929093072
-GATCAAGG	1.81339551475941
-ACGATCAG	2.186627499900309
-ATCGTGGT	1.8961194516999582
-ATCATGCG	2.7770388631297678
-AACAGCGA	2.4424263579409735
-GATCTTGC	1.0023688168869571
-CTAGCTCA	4.771422377684964
-TAGCCATG	2.926284526686799
-GTCCTAAG	2.430930590470414
-GTAGCGTA	2.235186780137198
-TCGACAAG	1.060807883104579
-TCGAGAGT	3.2323888609762728
-CGATCGAT	1.5430189620286607
-TCTTCGAC	11.58829741442824
-TCGGATTC	1.269481472421218
-CACTTCAC	1.1538680450906187
-AGAGTCCA	3.1154526413017862
-TGTTCCGT	4.331217732762278
-AGGATAGC	2.387682851437054
+TACCGGAT	21.02
+CTCTGGAT	9.63
+AGAGTCCA	3.12
+GTAGCGTA	2.24
+ATCATGCG	2.78
+AACAGCGA	2.44
+TCGACAAG	1.06
+TGTTCCGT	4.33
+TCGAGAGT	3.23
+CGGTAATC	1.39
+TAGCCATG	2.93
+TCTTCGAC	11.59
+CTAGCTCA	4.77
+TATGGCAC	3.08
+ACGATCAG	2.19
+GATCTTGC	1.0
+AGGATAGC	2.39
+CACTTCAC	1.15
+GCTACTCT	2.04
+ATCGTGGT	1.9
+CGATCGAT	1.54
+GTCCTAAG	2.43
+GATCAAGG	1.81
+TCGGATTC	1.27
 ```
 
 I ran my python script on the test file using the following command:
